@@ -36,8 +36,22 @@ class InsertionSortTest {
   @Test
   void testEmptyArraySort() { 
     int arr = {};
-    assertArrayEquals(new int[]{}, Insertionsort.insertionSort(arr));
+    assertArrayEquals(new int[]{}, InsertionSort.insertionSort(arr));
+  }
+
+  @Test
+  void testPositiveDuplicateArraySort() {
+    int arr = {2, 2, 2, 3, 1}; 
+    assertArrayEquals(new int[]{1, 2, 2, 2, 3}, InsertionSort.insertionSort(arr));
+  }
+
+  @Test
+  void testNegativeDuplicateArraySort() {
+    int arr = {-1, -1, -1, -9, 2}; 
+    assertArrayEquals(new int[]{-9, -1, -1, -1, 2}, InsertionSort.insertionSort(arr));
   }
 }
+    
+
       
   
