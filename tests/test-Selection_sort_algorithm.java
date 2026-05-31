@@ -38,4 +38,16 @@ class SelectionSortTest {
     int arr = {};
     assertArrayEquals(new int[]{}, SelectionSort.SelectionSort(arr));
   }
+
+  @Test
+  void testPositiveDuplicateArraySort() {
+    int arr = {2, 2, 2, 3, 1}; 
+    assertArrayEquals(new int[]{1, 2, 2, 2, 3}, SelectionSort.SelectionSort(arr));
+  }
+
+  @Test
+  void testNegativeDuplicateArraySort() {
+    int arr = {-1, -1, -1, -9, 2}; 
+    assertArrayEquals(new int[]{-9, -1, -1, -1, 2}, SelectionSort.SelectionSort(arr));
+  }
 }
